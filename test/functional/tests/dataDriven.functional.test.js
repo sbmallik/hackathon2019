@@ -1,7 +1,7 @@
 'use strict';
 
-const {By, until} = requireAbs('/test/functional/lib/constants.js'),
-      utils = requireAbs('/test/functional/lib/utils.js');
+const {By, until} = requireAbs('/test/jest-utils/constants.js'),
+      utils = requireAbs('/test/jest-utils/utils.js');
     
 describe('Data driven test', () => {
   let driver;

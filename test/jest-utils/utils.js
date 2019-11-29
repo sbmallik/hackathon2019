@@ -1,5 +1,6 @@
 'use strict';
-const {Builder, By, until, ChromeOptions} = require('./constants.js');
+
+const {Builder, By, until, ChromeOptions} = requireAbs('/test/jest-utils/constants.js');
 
 module.exports = {
   async driverInit() {
