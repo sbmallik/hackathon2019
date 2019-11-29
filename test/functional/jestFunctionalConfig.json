@@ -1,11 +1,11 @@
 {
-  "silent": true,
+  "silent": false,
   "globalSetup": "./test/jest-utils/setup.js",
   "globalTeardown": "./test/jest-utils/teardown.js",
   "setupFilesAfterEnv": [
-    "./test/video/setupFilesAfterEnv.js"
+    "./test/functional/setupFilesAfterEnv.js"
   ],
-  "testRegex": "test/video/tests/.*\\.(video.test)\\.js",
+  "testRegex": "test/functional/tests/.*\\.(functional.test)\\.js",
   "testEnvironment": "node",
   "reporters": [ "default", [
     "jest-junit", {
