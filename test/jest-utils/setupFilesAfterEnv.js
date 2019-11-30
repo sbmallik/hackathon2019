@@ -4,15 +4,15 @@ Jest sets up a new environment for every test file. Configs are loaded and node 
 */
 
 /* Allow absolute paths for reference files based on this folder */
-require('../jest-utils/require-abs.js')(__dirname + '/../..');
+require('./require-abs.js')(__dirname + '/../..');
 
 global.baseUrl = 'https://demo.applitools.com';
 
 /* Set default timeout for all tests. */
-const TEST_TIMEOUT = 3 * 60 * 1000;
+const TEST_TIMEOUT = 5 * 60 * 1000;
 jest.setTimeout(TEST_TIMEOUT);
 
 /* Set the environment for the current test */
 global.capabilities = `${process.env.CAPS}`;
-global.appName = 'tealPlayer';
+global.appName = 'hackathon2019';
 global.ELEMENT_TIMEOUT = 5000;

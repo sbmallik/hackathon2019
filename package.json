@@ -1,6 +1,6 @@
 {
-  "name": "eyes-jest",
-  "description": "Teal player video testing with JEST and Sauce Labs",
+  "name": "applitools-hackathon-2019",
+  "description": "Test repository for Applitools hackathon 2019.",
   "version": "0.1.0",
   "private": false,
   "license": "ISC",
@@ -11,20 +11,23 @@
     "selenium",
     "webdriver"
   ],
-  "bugs": "https://github.com/sbmallik/teal-video-player/issues",
+  "bugs": "https://github.com/sbmallik/hackathon2019/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sbmallik/teal-video-player"
+    "url": "https://github.com/sbmallik/hackathon2019"
   },
   "scripts": {
-    "test:functional": "jest --config ./test/functional/jestFunctionalConfig.json"
+    "test": "npm run test:functional && npm run test:visual",
+    "test:functional": "jest --config ./test/functional/jestFunctionalConfig.json",
+    "test:visual": "jest --config ./test/visual/jestVisualConfig.json"
   },
   "devDependencies": {
-    "chromedriver": "^77.0.0",
+    "@applitools/eyes-selenium": "4.31.22",
+    "chromedriver": "^78.0.0",
+    "dateformat": "^3.0.3",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
     "jest-junit": "^8.0.0",
-    "dateformat": "^3.0.3",
     "selenium-webdriver": "4.0.0-alpha.5"
   },
   "engines": {

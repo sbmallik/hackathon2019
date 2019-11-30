@@ -2,6 +2,7 @@
   
 const {Builder, By, until} = require('selenium-webdriver'),
       {Options: ChromeOptions} = require('selenium-webdriver/chrome'),
+      {Eyes, Target, MatchLevel, StitchMode, ConsoleLogHandler} = require('@applitools/eyes-selenium'),
       capabilities = {
         desktopChrome: {
           browserName: 'chrome',
@@ -38,5 +39,10 @@ module.exports = Object.freeze({
   By,
   until,
   ChromeOptions,
+  Eyes,
+  Target,
+  MatchLevel,
+  StitchMode,
+  ConsoleLogHandler,
   capabilities
 });

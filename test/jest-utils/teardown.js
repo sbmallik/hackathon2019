@@ -1,14 +1,13 @@
 'use strict';
-
-const orchestrationHelper = requireAbs('test/jest-utils/orchestration-helper.js');
-      // config = require('config');
+const util = require('util'),
+      exec = util.promisify(require('child_process').exec);
 
 module.exports = async function globalTearDown() {
-/*
-  if (config.test.video.useSauceConnect === 'true') {
-    await orchestrationHelper.stopSauceConnect();
-  } else {
-*/
-    await orchestrationHelper.killChromedriverProcesses();
-  // }
+  // Kills all chromedriver processes
+  try {
+    console.log('Killing all chromedriver processes.');
+    await exec('pkill -f chromedriver');
+  } catch (err) {
+    console.error(err);
+  }
 };

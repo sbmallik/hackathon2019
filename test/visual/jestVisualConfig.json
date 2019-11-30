@@ -5,12 +5,12 @@
   "setupFilesAfterEnv": [
     "./test/jest-utils/setupFilesAfterEnv.js"
   ],
-  "testRegex": "test/functional/tests/.*\\.(functional.test)\\.js",
+  "testRegex": "test/visual/tests/.*\\.(visual.test)\\.js",
   "testEnvironment": "node",
   "reporters": [ "default", [
     "jest-junit", {
       "outputDirectory": "test/reports",
-      "outputName": "reportFunctional.xml"
+      "outputName": "reportVisual.xml"
     }]
   ],
   "maxConcurrency": 1,
