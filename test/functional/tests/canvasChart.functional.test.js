@@ -8,7 +8,7 @@ describe('Canvas chart test', () => {
     
   beforeAll(async() => {
     driver = await utils.driverInit();
-    await driver.get(global.baseUrl + '/hackathonApp.html');
+    await driver.get(global.baseUrl + '/hackathonAppV2.html');
   });
     
   test('Validate financial data is displayed in chart form', async() => {
@@ -16,7 +16,7 @@ describe('Canvas chart test', () => {
     await driver.wait(until.elementIsVisible(webElement), global.ELEMENT_TIMEOUT);
     await driver.findElement(By.css('#showExpensesChart')).click();
     const currentUrl = await driver.getCurrentUrl();
-    expect(currentUrl).toBe(global.baseUrl + '/hackathonChart.html');
+    expect(currentUrl).toBe(global.baseUrl + '/hackathonChartV2.html');
     expect(await driver.findElement(By.css('.top-menu-controls'))).toBeDefined();
     expect(await driver.findElement(By.css('#addDataset'))).toBeDefined();
     expect(await driver.findElement(By.css('#canvas'))).toBeDefined();

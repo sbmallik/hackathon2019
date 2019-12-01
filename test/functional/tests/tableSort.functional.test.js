@@ -3,12 +3,12 @@
 const {By, until} = requireAbs('/test/jest-utils/constants.js'),
       utils = requireAbs('/test/jest-utils/utils.js'),
       amountsData = [
-        '- 320.00 USD',
         '- 244.00 USD',
+        '- 320.00 USD',
+        '+ 1,250.00 USD',
         '+ 17.99 USD',
         '+ 340.00 USD',
-        '+ 952.23 USD',
-        '+ 1,250.00 USD'
+        '+ 952.23 USD'
       ];
     
 describe('Table sort test', () => {
@@ -16,7 +16,7 @@ describe('Table sort test', () => {
     
   beforeAll(async() => {
     driver = await utils.driverInit();
-    await driver.get(global.baseUrl + '/hackathonApp.html');
+    await driver.get(global.baseUrl + '/hackathonAppV2.html');
   });
     
   test('Validate the table sorting feature', async() => {

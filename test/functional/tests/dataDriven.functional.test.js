@@ -8,7 +8,7 @@ describe('Data driven test', () => {
     
   beforeAll(async() => {
     driver = await utils.driverInit();
-    await driver.get(global.baseUrl + '/hackathon.html');
+    await driver.get(global.baseUrl + '/hackathonV2.html');
   });
     
   test('login-no-inputs', async() => {
@@ -23,7 +23,7 @@ describe('Data driven test', () => {
     expect(usernameInput).toBeDefined();
     usernameInput.sendKeys('smallik');
     await driver.findElement(By.css('#log-in')).click();
-    const alertBanner1 = await driver.wait(until.elementLocated(By.css('.alert-warning')), global.ELEMENT_TIMEOUT);
+    const alertBanner1 = await driver.wait(until.elementLocated(By.css('.alert-primary')), global.ELEMENT_TIMEOUT);
     await driver.wait(until.elementIsVisible(alertBanner1), global.ELEMENT_TIMEOUT);
     await driver.navigate().refresh();
   });
@@ -48,7 +48,7 @@ describe('Data driven test', () => {
     passwordInput.sendKeys('abc123');
     await driver.findElement(By.css('#log-in')).click();
     const currentUrl = await driver.getCurrentUrl();
-    expect(currentUrl).toBe(global.baseUrl + '/hackathonApp.html');
+    expect(currentUrl).toBe(global.baseUrl + '/hackathonAppV2.html');
   });
 
   afterAll(async() => {
