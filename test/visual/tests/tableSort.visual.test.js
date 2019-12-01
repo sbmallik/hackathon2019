@@ -9,7 +9,7 @@ describe('visual test', () => {
   beforeEach(async() => {
     driver = await utils.driverInit();
     eyes = await utils.eyesInit();
-    await driver.get(global.baseUrl + '/hackathonApp.html');
+    await driver.get(global.baseUrl + '/hackathonAppV2.html');
   });
 
   testName = test('Viewport capture of data table', async() => {

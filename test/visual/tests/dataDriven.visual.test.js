@@ -9,7 +9,7 @@ describe('visual test', () => {
   beforeEach(async() => {
     driver = await utils.driverInit();
     eyes = await utils.eyesInit();
-    await driver.get(global.baseUrl + '/hackathon.html');
+    await driver.get(global.baseUrl + '/hackathonV2.html');
   });
 
   testName = test('Capture invalid login scenario', async() => {

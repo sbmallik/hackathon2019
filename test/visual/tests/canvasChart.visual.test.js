@@ -10,7 +10,7 @@ describe('visual test', () => {
     driver = await utils.driverInit();
     eyes = await utils.eyesInit();
     eyes.setForceFullPageScreenshot(true);
-    await driver.get(global.baseUrl + '/hackathonChart.html');
+    await driver.get(global.baseUrl + '/hackathonChartV2.html');
   });
 
   testName = test('Fullpage capture of data chart', async() => {

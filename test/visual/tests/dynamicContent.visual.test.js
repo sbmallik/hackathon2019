@@ -10,7 +10,7 @@ describe('visual test', () => {
     driver = await utils.driverInit();
     eyes = await utils.eyesInit();
     eyes.setMatchLevel(MatchLevel.Layout2);
-    await driver.get(global.baseUrl + '/hackathonApp.html?showAd=true');
+    await driver.get(global.baseUrl + '/hackathonAppV2.html?showAd=true');
   });
 
   testName = test('Viewport capture of dynamic contents', async() => {
