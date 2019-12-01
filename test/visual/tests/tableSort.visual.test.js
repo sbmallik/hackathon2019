@@ -13,6 +13,7 @@ describe('visual test', () => {
   });
 
   testName = test('Viewport capture of data table', async() => {
+    await driver.findElement(By.css('#amount')).click();
     await eyes.open(driver, global.appName, testName.description);
     await eyes.check('viewport', Target.window());
     await utils.validateLegacyResult(eyes);
